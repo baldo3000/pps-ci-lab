@@ -1,17 +1,16 @@
-public class Pair {
-    private final int x;
-    private final int y;
-
-    public Pair(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
-
-    public int getX() {
-        return this.x;
-    }
-
-    public int getY() {
-        return this.y;
+/**
+ * A class representing a pair of int values
+ *
+ * @param x first value
+ * @param y second value
+ */
+public record Pair(int x, int y) {
+    /**
+     * Computes the sum of the two values of the pair
+     *
+     * @return The sum of the two values
+     */
+    public int getSum() {
+        return this.x + this.y;
     }
 }
